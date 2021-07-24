@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import '@raydeeeen/ui-component';
 
 @Component({
   selector: 'app-root',
