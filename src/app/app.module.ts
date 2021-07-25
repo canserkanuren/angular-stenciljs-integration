@@ -1,23 +1,14 @@
-import {
-  ApplicationRef,
-  CUSTOM_ELEMENTS_SCHEMA,
-  DoBootstrap,
-  NgModule
-} from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { defineCustomElements } from '@raydeeeen/ui-component';
+import { UiComponentAngularModule } from '@raydeeeen/ui-component-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, UiComponentAngularModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule implements DoBootstrap {
-  ngDoBootstrap(appRef: ApplicationRef): void {
-    defineCustomElements(window);
-  }
-}
+export class AppModule {}
